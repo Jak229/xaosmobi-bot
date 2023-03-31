@@ -1,12 +1,13 @@
 import os
+
+os.system("pip install -r requirements.txt")
+os.system("clear||cls")
+
 from rich import print
 from configparser import ConfigParser
 
 conf = ConfigParser()
 conf.read("config.ini")
-
-os.system("pip install -r requirements.txt")
-os.system("clear||cls")
 
 login = conf["SETTINGS"]["login"]
 password = conf["SETTINGS"]["password"]
