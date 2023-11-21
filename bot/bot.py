@@ -225,7 +225,7 @@ class Bot:
             ).find_all("a")
 
             start_attack = self.ses.get(
-                self.MAIN_L + attack_l[1 if len(attack_l) == 2 else 0]["href"]
+                self.MAIN_L + attack_l[1 if len(attack_l) == 3 else 0]["href"]
             )
 
             if "Вы очень слабы" in start_attack.text:
@@ -247,7 +247,7 @@ class Bot:
             while True:
                 try:
                     attack = self.ses.get(
-                        self.MAIN_L + attack_ll[1 if len(attack_ll) == 2 else 0]["href"]
+                        self.MAIN_L + attack_ll[1 if len(attack_ll) == 3 else 0]["href"]
                     )
 
                     if "Вы очень слабы" in attack.text:
