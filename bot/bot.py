@@ -20,7 +20,7 @@ class Bot:
         self.spc = spaces
 
         self.ses = requests.Session()
-        self.ses.headers = {"User-Agent": self.UA.random}
+        self.ses.headers.update({"User-Agent": self.UA.random})
 
     @property
     def name(self) -> str:
